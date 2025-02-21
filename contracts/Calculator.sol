@@ -2,7 +2,12 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.28;
 
-contract Calculator {
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+
+contract Calculator is ERC20 {
+    constructor() ERC20("Calculator", "CALC") {
+        _mint(msg.sender, 1000000 * 10 ** decimals());
+    }
     // Function to add two numbers
     function add(uint256 a, uint256 b) public pure returns (uint256) {
         return a + b;

@@ -1,0 +1,13 @@
+# Start Generation Here
+# Ignore Hardhat and Foundry related files
+node_modules/
+.cache/
+artifacts/
+build/
+*.log
+*.tsbuildinfo
+*.sol
+*.json
+# End Generation Here
+out/
+cache/

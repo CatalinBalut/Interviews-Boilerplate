@@ -35,4 +35,10 @@ contract CalculatorTest is Test {
         vm.expectRevert("Division by zero is not allowed");
         calculator.divide(1, 0);
     }
+
+    function testERC20() public {
+        assertEq(calculator.name(), "Calculator");
+        assertEq(calculator.symbol(), "CALC");
+        assertEq(calculator.decimals(), 18);
+    }
 }
